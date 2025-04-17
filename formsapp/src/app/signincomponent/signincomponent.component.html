@@ -1,0 +1,31 @@
+<form (submit)=onsubmit() #name="ngForm" id="signin">
+    <div class="form-group">
+        <div>
+            <label >Name:</label>
+        <input type="text" [(ngModel)]="uname" name="firstName"  >
+        </div>
+        
+        <br/>
+
+        <div>
+            <label >userid:</label>
+
+        <input type="text" [(ngModel)]="uid" name="userid">
+        </div>
+        
+        <br/>
+        <div>
+            <label >Password:</label>
+
+        <input type="text" [(ngModel)]="upw" name="userpw">
+        </div>
+        
+    </div>
+    <br/>
+    <button class="btn btn-prm" type="submit" style="margin:10px">SignIn</button>
+    <button class="btn btn-prm" type="reset" (click)="resetdata()">Reset</button>
+    <br/>
+    <div >
+        <p *ngIf="signinclick && !reset">{{msg}}</p>
+    </div>
+</form>
